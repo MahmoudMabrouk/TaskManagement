@@ -15,7 +15,6 @@ composer install
 
 then you should copy .env.example to .env file
 
-
 To Install npm run
 ```bash
 npm install
