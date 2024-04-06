@@ -27,8 +27,7 @@ class CreateEmployeeRequest extends FormRequest
             'first_name' => ['required', 'string'],
             'last_name' => ['required', 'string'],
             'email' => ['required', 'email', 'unique:users'],
-//            'password' => ['required', 'confirmed', Password::min(8)->mixedCase()->letters()->numbers()->symbols()],
-            'password' => ['required', 'confirmed'],
+            'password' => ['required', 'confirmed', Password::min(8)->mixedCase()->letters()->numbers()->symbols()],
             'phone' => ['required', 'regex:/^[0-9]+$/', 'min_digits:11', 'max_digits:13'],
             'salary' => ['required', 'numeric'],
             'image' => ['nullable', 'image' ,'max:2048', 'mimes:jpg,peg,jpeg,png']
